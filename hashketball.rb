@@ -482,3 +482,4 @@ end
 def long_name_steals_a_ton?
   player_with_most_of(:steals) == player_with_most_of(:player_name)
 end
+
