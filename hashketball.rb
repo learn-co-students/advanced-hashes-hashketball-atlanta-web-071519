@@ -1,4 +1,5 @@
-# basic solution: 
+# a basic solution is right below, but a more advanced solution at the very bottom
+
 # require 'pry'
 
 # def game_hash
