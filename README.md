@@ -25,7 +25,7 @@ The first method you will define is called `game_hash`. This method contains and
 * The `:players` key points to a hash of players whose names (as strings) are the keys to a hash containing their stats. The values for each player's names and their stats can be found in the table below. The stats keys should be formatted like this:
     * `:number`
     * `:shoe`
-    * `:num_points_scored`
+    * `:points`
     * `:rebounds`
     * `:assists`
     * `:steals`
