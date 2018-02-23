@@ -161,9 +161,7 @@ def find_the_team(team_name)
 end
 
 def find_the_player(name)
-  game_hash[:home][:players][name] ?
-  game_hash[:home][:players][name]
-  : game_hash[:away][:players][name]
+  players.fetch(name)
 end
 
 def player_biggest_shoe_size
