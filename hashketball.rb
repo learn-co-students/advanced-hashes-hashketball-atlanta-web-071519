@@ -113,10 +113,6 @@
    }
  end
 
-def all_players
-  [*game_hash[:away][:players], *game_hash[:home][:players]]
-end
-
 def find_player(name)
   all_players.find{ |p| p[:player_name] == name }
 end
@@ -130,15 +126,19 @@ def shoe_size(name)
 end
 
 def teams
-  [game_hash[:home], game_hash[:away]]
+  game_hash.keys.reduce([]){ |memo, k|  memo << game_hash[k] }
 end
 
-def team_by_name(team_name)
+def all_players
+  teams.reduce([]){ |memo, t|  memo << t[:players] }.flatten
+end
+
+def find_team_by_name(team_name)
   teams.find{ |t| t[:team_name] == team_name }
 end
 
 def team_colors(team_name)
-  team_by_name(team_name)[:colors]
+  find_team_by_name(team_name)[:colors]
 end
 
 def team_names
@@ -146,7 +146,7 @@ def team_names
 end
 
 def player_numbers(tn)
-  team_by_name(tn)[:players].reduce([]) do |memo, pl|
+  find_team_by_name(tn)[:players].reduce([]) do |memo, pl|
     memo << pl[:number]
     memo
   end
