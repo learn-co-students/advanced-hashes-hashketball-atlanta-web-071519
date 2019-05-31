@@ -17,13 +17,13 @@
 #                   :blocks => 7,
 #                   :slam_dunks => 2
 #                  },
-#                  {:player_name => "Bismak Biyombo",
+#                  {:player_name => "Bismack Biyombo",
 #                   :number => 0,
 #                   :shoe => 16,
 #                   :points => 12,
 #                   :rebounds => 4,
 #                   :assists => 7,
-#                   :steals => 7,
+#                   :steals => 22,
 #                   :blocks => 15,
 #                   :slam_dunks => 10
 #                  },
@@ -47,13 +47,13 @@
 #                   :blocks => 1,
 #                   :slam_dunks => 0
 #                  },
-#                  {:player_name => "Brendan Haywood",
+#                  {:player_name => "Kemba Walker",
 #                   :number => 33,
 #                   :shoe => 15,
 #                   :points => 6,
 #                   :rebounds => 12,
 #                   :assists => 12,
-#                   :steals => 22,
+#                   :steals => 7,
 #                   :blocks => 5,
 #                   :slam_dunks => 12
 #                  }
@@ -240,13 +240,13 @@ def game_hash
                   :blocks => 7,
                   :slam_dunks => 2
                  },
-                 {:player_name => "Bismak Biyombo",
+                 {:player_name => "Bismack Biyombo",
                   :number => 0,
                   :shoe => 16,
                   :points => 12,
                   :rebounds => 4,
                   :assists => 7,
-                  :steals => 7,
+                  :steals => 22,
                   :blocks => 15,
                   :slam_dunks => 10
                  },
@@ -270,13 +270,13 @@ def game_hash
                   :blocks => 1,
                   :slam_dunks => 0
                  },
-                 {:player_name => "Brendan Haywood",
+                 {:player_name => "Kemba Walker",
                   :number => 33,
                   :shoe => 15,
                   :points => 6,
                   :rebounds => 12,
                   :assists => 12,
-                  :steals => 22,
+                  :steals => 7,
                   :blocks => 5,
                   :slam_dunks => 12
                  }
