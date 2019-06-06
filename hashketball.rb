@@ -104,25 +104,25 @@ def game_hash
   }
 end
 
-def num_points_scored(dude)
+def num_points_scored(sought_player_name)
   game_hash.each do |_place, team|
     team.each do |attribute, data|
       next unless attribute == :players
 
       data.each do |player|
-        return player[:points] if player[:player_name] == dude
+        return player[:points] if player[:player_name] == sought_player_name
       end
     end
   end
 end
 
-def shoe_size(dude)
+def shoe_size(sought_player_name)
   game_hash.each do |_place, team|
     team.each do |attribute, data|
       next unless attribute == :players
 
       data.each do |player|
-        return player[:shoe] if player[:player_name] == dude
+        return player[:shoe] if player[:player_name] == sought_player_name
       end
     end
   end
@@ -156,14 +156,14 @@ def player_numbers(team_name)
   nums
 end
 
-def player_stats(dude)
+def player_stats(sought_player_name)
   new_hash = {}
   game_hash.collect do |place, team|
     team.each do |attribute, _data|
       next unless attribute == :players
 
       game_hash[place][attribute].each do |player|
-        next unless player[:player_name] == dude
+        next unless player[:player_name] == sought_player_name
 
         new_hash = player.delete_if do |k, _v|
           k == :player_name
